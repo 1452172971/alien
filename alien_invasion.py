@@ -78,11 +78,27 @@ class AlienInvasion:
         self.aliens.draw(self.screen)
         # pygame.display.flip()
 
+    def _update_aliens(self):
+        self._check_fleet_edges()
+        self.aliens.update()
+
+    def _check_fleet_edges(self):
+        for alien in self.aliens.sprites():
+            if alien.check_edges():
+                self._change_fleet_direction()
+                break
+
+    def _change_fleet_direction(self):
+        for alien in self.aliens.sprites():
+            alien.rect.y += self.settings.fleet_drop_speed
+        self.settings.fleet_direction *= -1
+
     def run_game(self):
         while True:
             self._check_events()
             self.ship.update()
             self.bullets.update()
+            self._update_aliens()
             for bullet in self.bullets.copy():
                 if bullet.rect.bottom <= 0:
                     self.bullets.remove(bullet)
