@@ -2,7 +2,7 @@ import sys
 from random import randint
 from time import sleep
 import pygame
-from setting import Setting
+from settings import Setting
 from game_stats import GameStats
 from scoreboard import Scoreboard
 from button import Button
@@ -30,7 +30,7 @@ class AlienInvasion:
         self.sb = Scoreboard(self)
         self.ship = Ship(self)
         self.bullets = pygame.sprite.Group()
-        self.aliens = pygame.sprite.Group()
+        self.aliens = pygame. sprite.Group()
         self._create_fleet()
         self.stars = pygame.sprite.Group()
         self.create_stars(self.settings.screen_width,

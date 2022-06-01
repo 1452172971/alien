@@ -12,7 +12,7 @@ class Ship(Sprite):
         self.settings = ai_game.settings
         # 加载外星人图像并设置其rect属性
         self.screen_rect = ai_game.screen.get_rect()
-        self.image = pygame.image.load('program/images/ship.bmp')
+        self.image = pygame.image.load('images/ship.bmp')
         # 向右旋转90
         self.image = pygame.transform.rotate(self.image, -90)
         self.rect = self.image.get_rect()

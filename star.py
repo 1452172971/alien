@@ -10,5 +10,5 @@ class Star(Sprite):
         self.screen = ai_game.screen
         self.settings = ai_game.settings
         # 加载外星人图像并设置其rect属性
-        self.image = pygame.image.load('program/images/star.jpg')
+        self.image = pygame.image.load('images/star.png')
         self.rect = self.image.get_rect()

@@ -11,7 +11,7 @@ class Aline(Sprite):
         self.screen = ai_game.screen
         self.settings = ai_game.settings
         # 加载外星人图像并设置其rect属性
-        self.image = pygame.image.load('program/images/alien.bmp')
+        self.image = pygame.image.load('images/alien.bmp')
         self.rect = self.image.get_rect()
         # 每个外星人初始在屏幕右下角附近
         self.rect.x = 1400

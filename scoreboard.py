@@ -53,7 +53,7 @@ class Scoreboard:
             self.stats.high_score = self.stats.score
         self.prep_high_score()
         # 将最高分覆盖文件中分数
-        with open('program/high_score.txt', 'w') as high_score:
+        with open('high_score.txt', 'w') as high_score:
             high_score.write(str(self.stats.high_score))
 
     def prep_level(self):
